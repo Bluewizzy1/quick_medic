@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div>
+        <div>
+            <img src="{{object.photo.url}}"/>
+        </div>
+
+        <h2>{{object.first_name}}</h2>
+        <h2>{{object.last_name}}</h2>
+        <h2>{{object.speciality}}</h2>
+        <h2>{{object.portfolio_number}}</h2>
+        <h2>{{object.email}}</h2>
+        <h2>{{object.phone}}</h2>
+        <h2>{% if object.is_verified %}</h2>
+        <p>Verified Doctor</p>
+        {% else %}
+        <p>Not verified</p>
+       {% endif %}
+    </div>
+
+{% endblock  %}

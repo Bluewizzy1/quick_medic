@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div>
+        {% for object in object_list %}
+            <div>
+                <span><h2>{{object.first_name}} {{object.last_name}}</h2></sapn>
+                <span><h2>{{object.speciality}}</h2></sapn>
+                <button><a href="{% url 'doctor_email' object.pk %}">View Details</a></button>
+
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
